@@ -2,90 +2,284 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="МамаПлюс — пространство мамы и малыша в Нахабино. Йога, пилатес, танцы и раннее развитие.">
-<title>МамаПлюс — пространство мамы и малыша</title>
-<link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="МамаПлюс — пространство мамы и малыша в Нахабино. Йога, пилатес, танцы и раннее развитие.">
+  <meta name="theme-color" content="#e8f1e9">
+  <title>МамаПлюс — пространство мамы и малыша</title>
+
+  <link rel="stylesheet" href="/style.css?v=3">
 </head>
+
 <body>
+
 <header class="header">
-<a class="brand" href="#">
-<span class="brand-mark">♡</span>
-<span><b><i>Мама</i><em>Плюс</em></b><small>ПРОСТРАНСТВО МАМЫ И МАЛЫША</small></span>
-</a>
-<button class="menu" id="menu">☰</button>
-<nav id="nav">
-<a href="#home">Главная</a><a href="#about">О студии</a><a href="#programs">Направления</a><a href="#schedule">Расписание</a><a href="#prices">Цены</a><a href="#contacts">Контакты</a>
-</nav>
-<a class="button header-cta" href="#booking">▦ Записаться онлайн</a>
+  <a class="brand" href="#home">
+    <span class="brand-mark">♡</span>
+    <span>
+      <b><i>Мама</i><em>Плюс</em></b>
+      <small>ПРОСТРАНСТВО МАМЫ И МАЛЫША</small>
+    </span>
+  </a>
+
+  <button class="menu" id="menu" type="button" aria-label="Открыть меню">
+    ☰
+  </button>
+
+  <nav id="nav">
+    <a href="#home">Главная</a>
+    <a href="#about">О студии</a>
+    <a href="#programs">Направления</a>
+    <a href="#schedule">Расписание</a>
+    <a href="#prices">Цены</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+
+  <a class="button header-cta" href="#booking">
+    ▦ Записаться онлайн
+  </a>
 </header>
+
 <main>
-<section class="hero" id="home">
-<div class="hero-copy">
-<p class="script" id="intro"></p>
-<h1><span>Мама</span><em>Плюс</em></h1>
-<p class="overline">ПРОСТРАНСТВО МАМЫ И МАЛЫША</p>
-<p class="hero-desc" id="description"></p>
-<a class="button" href="#booking">▦ Выбрать занятие&nbsp; →</a>
-</div>
-<div class="hero-photo" role="img" aria-label="Мама занимается йогой рядом с малышом"></div>
-</section>
-<section class="quick" id="programs"></section>
-<section class="lower" id="about">
-<div class="why"><h2>Почему выбирают<br>МамаПлюс?</h2><ul id="advantages"></ul></div>
-<img class="studio-photo" src="/studio-interior.jpg" alt="Уютный интерьер студии">
-<div class="schedule-card">
-<h2>▦ &nbsp;Расписание</h2>
-<p>Занятия проходят в удобное для вас время</p>
-<a class="button small" href="#schedule">Посмотреть расписание →</a>
-<div class="card-bottom">♡ &nbsp; Онлайн-запись на занятия</div>
-</div>
-<img class="flowers" src="/flowers.jpg" alt="Цветы в интерьере">
-</section>
-<section class="section" id="schedule">
-<div class="section-head">
-<p class="script">Планируйте время для себя</p>
-<h2>Расписание занятий</h2>
-<p id="scheduleNote"></p>
-</div>
-<div class="schedule-grid" id="scheduleList"></div>
-</section>
-<section class="section prices" id="prices">
-<div class="section-head">
-<p class="script">Забота о себе — бесценна</p>
-<h2>Цены и абонементы</h2>
-<p>Стоимость занятий и пробного посещения уточняйте у администратора. Информация редактируется в панели управления.</p>
-</div>
-<a class="button" href="#booking">Узнать стоимость и записаться</a>
-</section>
-<section class="section booking" id="booking">
-<div class="section-head">
-<p class="script">Будем рады знакомству</p>
-<h2>Запись на занятие</h2>
-<p>Оставьте заявку — мы свяжемся с вами и подтвердим время.</p>
-</div>
-<form id="bookingForm">
-<label>Ваше имя *<input name="name" required placeholder="Как к вам обращаться"></label>
-<label>Телефон *<input name="phone" type="tel" required placeholder="+7 ___ ___-__-__"></label>
-<label>Направление *<select name="program" id="program" required><option value="">Выберите занятие</option></select></label>
-<div class="form-row">
-<label>Желаемая дата *<input name="date" type="date" required></label>
-<label>Время *<input name="time" type="time" required></label>
-</div>
-<label>Возраст малыша (если актуально)<input name="childAge" placeholder="Например, 8 месяцев"></label>
-<label>Комментарий<textarea name="comment" rows="3" placeholder="Ваши пожелания"></textarea></label>
-<label class="consent"><input type="checkbox" name="consent" required> Я согласна на обработку персональных данных для ответа на заявку.</label>
-<button class="button" type="submit">Отправить заявку →</button>
-<p class="form-message" id="formMessage" aria-live="polite"></p>
-</form>
-</section>
-<section class="contacts" id="contacts">
-<div><p class="script">Ждём вас</p><h2>МамаПлюс</h2><p id="city"></p><p id="contactEmail"></p><p id="contactPhone"></p></div>
-<div class="contact-note">Место, где мама может позаботиться о себе, а малыш — расти и открывать мир.</div>
-</section>
+
+  <!-- ГЛАВНЫЙ ЭКРАН -->
+
+  <section class="hero" id="home">
+    <div class="hero-copy">
+      <p class="script" id="intro">
+        Забота о себе. Развитие малыша. Гармония.
+      </p>
+
+      <h1>
+        <span>Мама</span><em>Плюс</em>
+      </h1>
+
+      <p class="overline">
+        ПРОСТРАНСТВО МАМЫ И МАЛЫША
+      </p>
+
+      <p class="hero-desc" id="description">
+        Йога, пилатес, танцы, раннее развитие и многое другое.
+      </p>
+
+      <a class="button" href="#booking">
+        ▦ Выбрать занятие →
+      </a>
+    </div>
+
+    <div class="hero-photo"
+         role="img"
+         aria-label="Мама занимается йогой рядом с малышом">
+    </div>
+  </section>
+
+  <!-- НАПРАВЛЕНИЯ -->
+
+  <section class="quick" id="programs">
+  </section>
+
+  <!-- О СТУДИИ -->
+
+  <section class="lower" id="about">
+
+    <div class="why">
+      <h2>Почему выбирают<br>МамаПлюс?</h2>
+      <ul id="advantages"></ul>
+    </div>
+
+    <img
+      class="studio-photo"
+      src="/studio-interior.jpg"
+      alt="Уютный интерьер студии"
+    >
+
+    <div class="schedule-card">
+      <h2>▦ &nbsp;Расписание</h2>
+      <p>Занятия проходят в удобное для вас время.</p>
+
+      <a class="button small" href="#schedule">
+        Посмотреть расписание →
+      </a>
+
+      <div class="card-bottom">
+        ♡ &nbsp; Онлайн-запись на занятия
+      </div>
+    </div>
+
+    <img
+      class="flowers"
+      src="/flowers.jpg"
+      alt="Цветы в интерьере"
+    >
+
+  </section>
+
+  <!-- РАСПИСАНИЕ -->
+
+  <section class="section" id="schedule">
+
+    <div class="section-head">
+      <p class="script">Планируйте время для себя</p>
+      <h2>Расписание занятий</h2>
+      <p id="scheduleNote">
+        Расписание примерное — уточняйте свободные места при записи.
+      </p>
+    </div>
+
+    <div class="schedule-grid" id="scheduleList"></div>
+
+  </section>
+
+  <!-- ЦЕНЫ -->
+
+  <section class="section prices" id="prices">
+
+    <div class="section-head">
+      <p class="script">Забота о себе — бесценна</p>
+      <h2>Цены и абонементы</h2>
+
+      <p>
+        Стоимость занятий и пробного посещения уточняйте
+        у администратора. Информация редактируется
+        в панели управления.
+      </p>
+    </div>
+
+    <a class="button" href="#booking">
+      Узнать стоимость и записаться
+    </a>
+
+  </section>
+
+  <!-- ЗАПИСЬ -->
+
+  <section class="section booking" id="booking">
+
+    <div class="section-head">
+      <p class="script">Будем рады знакомству</p>
+      <h2>Запись на занятие</h2>
+      <p>
+        Оставьте заявку — мы свяжемся с вами
+        и подтвердим время.
+      </p>
+    </div>
+
+    <form id="bookingForm">
+
+      <label>
+        Ваше имя *
+        <input
+          name="name"
+          type="text"
+          required
+          placeholder="Как к вам обращаться"
+        >
+      </label>
+
+      <label>
+        Телефон *
+        <input
+          name="phone"
+          type="tel"
+          required
+          placeholder="+7 ___ ___-__-__"
+        >
+      </label>
+
+      <label>
+        Направление *
+        <select name="program" id="program" required>
+          <option value="">Загружаем занятия...</option>
+        </select>
+      </label>
+
+      <div class="form-row">
+
+        <label>
+          Желаемая дата *
+          <input name="date" type="date" required>
+        </label>
+
+        <label>
+          Время *
+          <input name="time" type="time" required>
+        </label>
+
+      </div>
+
+      <label>
+        Возраст малыша (если актуально)
+        <input
+          name="childAge"
+          type="text"
+          placeholder="Например, 8 месяцев"
+        >
+      </label>
+
+      <label>
+        Комментарий
+        <textarea
+          name="comment"
+          rows="3"
+          placeholder="Ваши пожелания"
+        ></textarea>
+      </label>
+
+      <label class="consent">
+        <input
+          type="checkbox"
+          name="consent"
+          required
+        >
+        Я согласна на обработку персональных данных
+        для ответа на заявку.
+      </label>
+
+      <button class="button" type="submit">
+        Отправить заявку →
+      </button>
+
+      <p
+        class="form-message"
+        id="formMessage"
+        aria-live="polite"
+      ></p>
+
+    </form>
+
+  </section>
+
+  <!-- КОНТАКТЫ -->
+
+  <section class="contacts" id="contacts">
+
+    <div>
+      <p class="script">Ждём вас</p>
+      <h2>МамаПлюс</h2>
+      <p id="city">Нахабино, Московская область</p>
+      <p id="contactEmail">kitty94-01@mail.ru</p>
+      <p id="contactPhone"></p>
+    </div>
+
+    <div class="contact-note">
+      Место, где мама может позаботиться о себе,
+      а малыш — расти и открывать мир.
+    </div>
+
+  </section>
+
 </main>
-<footer>© <span id="year"></span> МамаПлюс · Пространство мамы и малыша <a href="/admin">Панель управления</a></footer>
-<script src="/app.js"></script>
+
+<footer>
+  © <span id="year"></span>
+  МамаПлюс · Пространство мамы и малыша
+
+  <a href="/admin">Панель управления</a>
+</footer>
+
+<!-- ОБНОВЛЁННАЯ ВЕРСИЯ СКРИПТА -->
+
+<script src="/app.js?v=3" defer></script>
+
 </body>
 </html>
