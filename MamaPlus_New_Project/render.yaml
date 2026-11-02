@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mamaplus
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: MAIL_TO
+        value: kitty94-01@mail.ru
