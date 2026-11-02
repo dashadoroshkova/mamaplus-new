@@ -1,1 +1,515 @@
-:root{--sage:#7e866f;--sage-dark:#68725d;--pink:#c98f88;--cream:#f8f5ed;--ink:#55594d;--line:#e9e2d7}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fffefa;color:var(--ink);font-family:Georgia,'Times New Roman',serif}a{color:inherit;text-decoration:none}.header{height:76px;padding:10px 5.2%;display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fffefa;position:sticky;top:0;z-index:5;border-bottom:1px solid #eee8de}.brand{display:flex;align-items:center;gap:9px;min-width:225px}.brand-mark{font-size:40px;color:var(--sage)}.brand b{font: bold 28px Arial,sans-serif;letter-spacing:-1.5px;color:var(--sage)}.brand em,h1 em{font-style:normal;color:var(--pink)}.brand small{display:block;font:8px Arial,sans-serif;letter-spacing:2px;margin-top:2px}.header nav{display:flex;gap:25px;font-size:13px}.header nav a:hover{color:var(--pink)}.button{display:inline-block;border:0;border-radius:28px;background:var(--sage);color:white;padding:14px 24px;font: bold 14px Georgia;cursor:pointer;transition:.2s}.button:hover{background:var(--sage-dark);transform:translateY(-1px)}.header-cta{white-space:nowrap;padding:12px 19px;font-size:12px}.menu{display:none}.hero{display:grid;grid-template-columns:37% 63%;min-height:315px;background:#f5f0e7}.hero-copy{padding:42px 8% 35px 15%;align-self:center}.script{font-style:italic;color:#777a68;font-size:20px;margin:0 0 13px}.hero h1{font: bold clamp(42px,5vw,65px) Arial,sans-serif;letter-spacing:-3px;margin:0;color:var(--sage)}.overline{font: bold 13px Arial,sans-serif;letter-spacing:4px;margin:8px 0 20px}.hero-desc{font-size:15px;line-height:1.55;margin:0 0 23px;max-width:390px}.hero-photo{background:url('/assets/hero-mama-baby.jpg') center 48%/cover no-repeat;min-height:315px}.quick{display:grid;grid-template-columns:repeat(6,1fr);padding:20px 4%;background:#fbf9f3}.service{text-align:center;padding:0 12px;border-right:1px solid var(--line)}.service:last-child{border:0}.service-icon{width:57px;height:57px;border-radius:50%;display:grid;place-items:center;margin:0 auto 10px;background:#d8d9c9;color:white;font-size:28px}.service:nth-child(2n) .service-icon{background:#d9aaa1}.service h3{font-size:14px;margin:0 0 7px}.service p{font-size:12px;line-height:1.4;color:#858477;margin:0}.lower{display:grid;grid-template-columns:1fr 1.55fr 1.05fr .42fr;gap:9px;padding:0 0 18px;background:#fbf9f3}.why{background:#f0f0e6;padding:22px 18%;border-radius:0 0 12px 0}.why h2,.schedule-card h2{font-size:22px;font-weight:normal;margin:0 0 13px}.why ul{padding:0;list-style:none;font-size:13px;line-height:2}.why li:before{content:'♥';color:#9ca28c;margin-right:10px}.studio-photo,.flowers{width:100%;height:100%;min-height:190px;object-fit:cover;border-radius:7px}.schedule-card{background:#f5e5e1;border-radius:8px;padding:22px 10%}.schedule-card p{font-size:13px;line-height:1.5;margin-left:36px}.small{font-size:12px;padding:10px 17px;margin-left:35px}.card-bottom{border-top:1px solid #e7d5d0;margin-top:20px;padding-top:17px;font-size:13px;color:#9b7771}.section{padding:68px 7%;text-align:center}.section-head{max-width:680px;margin:0 auto 28px}.section h2,.contacts h2{font-size:32px;font-weight:normal;margin:7px 0 12px;color:#68715f}.section-head>p:not(.script){color:#888477;line-height:1.6}.schedule-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:13px;text-align:left}.schedule-item{padding:19px 22px;border:1px solid var(--line);border-radius:12px;background:#fff}.schedule-item b{display:block;color:var(--sage);margin-bottom:7px}.schedule-item span{font-size:14px}.prices{background:#f6f2e9}.booking{background:#fbf8f2}.booking form{max-width:570px;margin:auto;text-align:left;display:grid;gap:14px}.booking label{display:grid;gap:6px;font-size:14px}.booking input,.booking select,.booking textarea{width:100%;border:1px solid #e2dbcf;border-radius:8px;background:white;padding:12px;font:15px Georgia;color:var(--ink)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.booking .consent{display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.4}.consent input{width:auto;margin-top:2px}.form-message{font-size:14px;min-height:20px}.contacts{padding:45px 9%;display:flex;justify-content:space-between;gap:30px;background:#e9eadf}.contacts h2{margin:0}.contacts p{line-height:1.5}.contact-note{max-width:340px;align-self:center;font-style:italic;font-size:20px;line-height:1.5}footer{padding:20px 5%;font-size:12px;color:#8b897d;display:flex;justify-content:space-between;gap:15px}footer a{text-decoration:underline}@media(max-width:900px){.header nav{gap:12px;font-size:12px}.header-cta{display:none}.hero-copy{padding-left:9%}.quick{grid-template-columns:repeat(3,1fr);row-gap:22px}.service:nth-child(3){border:0}.lower{grid-template-columns:1fr 1fr}.why{padding:25px}.flowers{display:none}}@media(max-width:620px){.header{height:65px;padding:8px 5%}.brand{min-width:0}.brand b{font-size:24px}.brand-mark{font-size:32px}.menu{display:block;border:0;background:none;color:var(--sage);font-size:25px}.header nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fffefa;padding:18px 7%;flex-direction:column;box-shadow:0 8px 12px #0001}.header nav.open{display:flex}.hero{grid-template-columns:1fr}.hero-copy{padding:35px 8% 28px}.hero-photo{min-height:230px;grid-row:1}.hero h1{font-size:54px}.quick{grid-template-columns:repeat(2,1fr);padding:20px 3%}.service:nth-child(3){border-right:1px solid var(--line)}.service:nth-child(2n){border:0}.lower{grid-template-columns:1fr}.studio-photo{min-height:190px}.schedule-card{padding:24px}.schedule-grid{grid-template-columns:1fr}.section{padding:48px 6%}.form-row{grid-template-columns:1fr}.contacts{display:block}footer{flex-direction:column}}
+/* =====================================
+   МАМАПЛЮС — ОСНОВНОЙ СТИЛЬ САЙТА
+   ===================================== */
+
+:root {
+  --mint: #a9c8b8;
+  --mint-dark: #648c79;
+  --mint-light: #e8f1eb;
+  --cream: #fbf8f1;
+  --pink: #ead4d0;
+  --text: #454b46;
+  --muted: #777d77;
+  --white: #ffffff;
+  --gold: #b99a69;
+  --shadow: 0 8px 28px rgba(70, 90, 77, 0.09);
+  --radius: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ШАПКА */
+
+header,
+.header {
+  width: 100%;
+  background: rgba(251, 248, 241, 0.97);
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo,
+.logo a,
+.brand {
+  color: var(--mint-dark);
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 14px;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--mint-dark);
+}
+
+/* ОБЩИЕ БЛОКИ */
+
+section {
+  padding: 65px 6%;
+}
+
+.container {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--mint-dark);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(34px, 5vw, 56px);
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-size: clamp(27px, 4vw, 38px);
+  text-align: center;
+  margin: 0 0 35px;
+}
+
+h3 {
+  font-size: 21px;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  max-width: 650px;
+  margin: -18px auto 35px;
+}
+
+/* ПЕРВЫЙ ЭКРАН */
+
+.hero {
+  min-height: 500px;
+  padding: 55px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  background: var(--mint-light);
+}
+
+.hero-content {
+  max-width: 560px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.hero-photo {
+  background: url('/hero-mama-baby.jpg') center 48% / cover no-repeat;
+  min-height: 315px;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* КНОПКИ */
+
+.btn,
+button,
+.submit-btn {
+  display: inline-block;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 27px;
+  background: var(--mint-dark);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.btn:hover,
+button:hover,
+.submit-btn:hover {
+  background: #527763;
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--mint-dark);
+  border: 1px solid var(--mint);
+}
+
+.btn-light:hover {
+  background: var(--mint-light);
+  color: var(--mint-dark);
+}
+
+/* НАПРАВЛЕНИЯ И КАРТОЧКИ */
+
+.programs,
+.cards,
+.services,
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card,
+.program-card,
+.service-card,
+.feature-card {
+  background: var(--white);
+  padding: 27px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s;
+}
+
+.card:hover,
+.program-card:hover,
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.card p,
+.program-card p,
+.service-card p {
+  color: var(--muted);
+}
+
+.card-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+/* О СТУДИИ */
+
+.about {
+  background: var(--white);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.studio-photo {
+  width: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.flowers {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* РАСПИСАНИЕ */
+
+.schedule {
+  background: var(--mint-light);
+}
+
+.schedule-list {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.schedule-item {
+  background: var(--white);
+  padding: 17px 22px;
+  margin-bottom: 12px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+
+.schedule-time {
+  color: var(--mint-dark);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ЦЕНЫ */
+
+.price-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.price {
+  color: var(--gold);
+  font-size: 28px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+/* ЗАПИСЬ */
+
+.booking {
+  background: var(--mint-light);
+}
+
+.booking-form {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 32px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+form label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 13px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #d9e3dc;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: var(--mint-dark);
+  box-shadow: 0 0 0 3px rgba(100, 140, 121, 0.12);
+}
+
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+form button {
+  width: 100%;
+}
+
+/* КОНТАКТЫ */
+
+.contacts {
+  background: var(--white);
+  text-align: center;
+}
+
+.contacts p {
+  color: var(--muted);
+}
+
+.contact-info {
+  margin: 20px auto;
+  line-height: 2;
+}
+
+/* ПОДВАЛ */
+
+footer {
+  padding: 30px 6%;
+  background: #dce9df;
+  text-align: center;
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* АДМИНИСТРАТИВНАЯ СТРАНИЦА */
+
+.admin-container {
+  width: min(1000px, 92%);
+  margin: 40px auto;
+}
+
+.admin-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.admin-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-card th,
+.admin-card td {
+  padding: 12px;
+  border-bottom: 1px solid #e7eee9;
+  text-align: left;
+}
+
+/* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА */
+
+@media (max-width: 760px) {
+  header,
+  .header {
+    flex-direction: column;
+    padding: 16px 5%;
+    gap: 12px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  section {
+    padding: 45px 5%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 5%;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-photo {
+    min-height: 260px;
+    width: 100%;
+  }
+
+  .programs,
+  .cards,
+  .services,
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .booking-form {
+    padding: 22px 17px;
+  }
+
+  .logo,
+  .logo a,
+  .brand {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 31px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .card,
+  .program-card,
+  .service-card {
+    padding: 21px;
+  }
+}
