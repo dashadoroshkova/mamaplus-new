@@ -1,0 +1,29 @@
+name: Unpack website
+
+on:
+  push:
+    paths:
+      - 'MamaPlus_New_Project.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack website
+        run: |
+          unzip -o MamaPlus_New_Project.zip -d extracted
+          cp -r extracted/. .
+          rm -rf extracted
+          rm MamaPlus_New_Project.zip
+      - name: Commit files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Unpack MamaPlus website" || exit 0
+          git push
