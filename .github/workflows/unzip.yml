@@ -16,10 +16,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Unpack website
         run: |
-          unzip -o MamaPlus_New_Project.zip -d extracted
+          unzip -o "MamaPlus_New_Project 3.zip" -d extracted
           cp -r extracted/. .
           rm -rf extracted
-          rm MamaPlus_New_Project.zip
+          rm "MamaPlus_New_Project 3.zip"
       - name: Commit files
         run: |
           git config user.name "github-actions[bot]"
