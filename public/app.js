@@ -1,6 +1,9 @@
+
 /* =====================================
    МАМАПЛЮС — РАБОТА САЙТА
    ===================================== */
+
+const API = 'https://mamaplus-server.onrender.com';
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -22,10 +25,10 @@ function setText(selector, value) {
 
 async function loadSite() {
   try {
-    const response = await fetch('/api/site');
+    const response = await fetch(`${API}/api/site`);
 
     if (!response.ok) {
-      throw new Error('Не удалось загрузить информацию');
+      throw new Error('Не удалось загрузить информацию о студии');
     }
 
     const site = await response.json();
@@ -37,6 +40,8 @@ async function loadSite() {
     setText('#contactPhone', site.phone);
     setText('#scheduleNote', site.scheduleNote);
 
+    /* ПРЕИМУЩЕСТВА */
+
     const advantages = $('#advantages');
 
     if (advantages) {
@@ -44,6 +49,8 @@ async function loadSite() {
         .map(item => `<li>${esc(item)}</li>`)
         .join('');
     }
+
+    /* НАПРАВЛЕНИЯ ЗАНЯТИЙ */
 
     const programs = $('#programs');
 
@@ -59,17 +66,21 @@ async function loadSite() {
         .join('');
     }
 
+    /* СПИСОК НАПРАВЛЕНИЙ В ФОРМЕ ЗАПИСИ */
+
     const programSelect = $('#program');
 
     if (programSelect) {
       programSelect.innerHTML =
         '<option value="">Выберите занятие</option>' +
         (site.services || [])
-          .map(item =>
-            `<option value="${esc(item.title)}">${esc(item.title)}</option>`
-          )
+          .map(item => `
+            <option value="${esc(item.title)}">${esc(item.title)}</option>
+          `)
           .join('');
     }
+
+    /* РАСПИСАНИЕ */
 
     const schedule = $('#scheduleList');
 
@@ -86,6 +97,14 @@ async function loadSite() {
 
   } catch (error) {
     console.error('Ошибка загрузки сайта:', error);
+
+    const programSelect = $('#program');
+
+    if (programSelect) {
+      programSelect.innerHTML =
+        '<option value="">Не удалось загрузить занятия</option>';
+    }
+
     setText('#intro', 'Добро пожаловать в студию «МамаПлюс»!');
   }
 }
@@ -97,9 +116,26 @@ const menu = $('#menu');
 if (menu) {
   menu.addEventListener('click', () => {
     const nav = $('#nav');
-    if (nav) nav.classList.toggle('open');
+
+    if (nav) {
+      nav.classList.toggle('open');
+    }
   });
 }
+
+/* ЗАКРЫТИЕ МЕНЮ ПОСЛЕ ПЕРЕХОДА */
+
+const navLinks = document.querySelectorAll('#nav a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const nav = $('#nav');
+
+    if (nav) {
+      nav.classList.remove('open');
+    }
+  });
+});
 
 /* ТЕКУЩИЙ ГОД */
 
@@ -126,7 +162,8 @@ if (bookingForm) {
 
     if (consent && !consent.checked) {
       if (message) {
-        message.textContent = 'Пожалуйста, подтвердите согласие на обработку данных.';
+        message.textContent =
+          'Пожалуйста, подтвердите согласие на обработку данных.';
       }
       return;
     }
@@ -144,7 +181,7 @@ if (bookingForm) {
     }
 
     try {
-      const response = await fetch('/api/bookings', {
+      const response = await fetch(`${API}/api/bookings`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -157,12 +194,15 @@ if (bookingForm) {
       try {
         result = await response.json();
       } catch {
-        throw new Error('Сервер вернул некорректный ответ. Попробуйте позже.');
+        throw new Error(
+          'Сервер вернул некорректный ответ. Попробуйте позже.'
+        );
       }
 
       if (!response.ok) {
         throw new Error(
-          result.error || 'Не удалось отправить заявку. Попробуйте ещё раз.'
+          result.error ||
+          'Не удалось отправить заявку. Попробуйте ещё раз.'
         );
       }
 
@@ -179,7 +219,8 @@ if (bookingForm) {
 
       if (message) {
         message.textContent =
-          error.message || 'Ошибка отправки. Пожалуйста, попробуйте позже.';
+          error.message ||
+          'Ошибка отправки. Пожалуйста, попробуйте позже.';
       }
 
     } finally {
@@ -191,6 +232,6 @@ if (bookingForm) {
   });
 }
 
-/* ЗАПУСК */
+/* ЗАПУСК САЙТА */
 
 loadSite();
